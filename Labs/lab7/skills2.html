@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Skills </title>
+        <style>
+            td, th {border: 1px solid black;}
+        </style>
+        <link rel="stylesheet" href="stylesheet7.css">
+    </head>
+    <body>
+        <nav> 
+            <a class="navlink" href="index.html"> Home</a> &#124;
+            <a class="navlink" href="skills2.html"> Travels</a> &#124;
+            <a class="navlink" href="contact2.html"> Contact</a>
+        </nav>
+        <h1> Rating Countries I've visited </h1>
+            <table> 
+                <caption> Rating Countries </caption>
+                <tr>
+                    <th> </th>
+                    <th> Spain </th>
+                    <th> Portugal </th>
+                    <th> Italy </th>
+                    <th> London </th>
+                    <th> France </th>
+                    <th> Greece </th>
+                    <th> Netherlands </th>
+                    <th> Andorra </th>
+                    <th> Turks & Caicos </th>
+                    <th> Bahamas </th>
+                </tr>
+                <tr class="evenrow"> 
+                    <td> Place </td>
+                    <td> 8.5 </td>
+                    <td> 9</td>
+                    <td> 8.5</td>
+                    <td> 6.5</td>
+                    <td> 6</td>
+                    <td> 7.5 </td>
+                    <td> 8</td>
+                    <td> 7 </td>
+                    <td> 10</td>
+                    <td> 9.5</td>
+                </tr>
+                <tr>
+                    <td> People </td>
+                    <td> 9 </td>
+                    <td> 9 </td>
+                    <td> 8 </td>
+                    <td> 6.5 </td>
+                    <td> 6.5 </td>
+                    <td> 5 </td>
+                    <td> 9 </td>
+                    <td> 7 </td>
+                    <td> 10 </td>
+                    <td> 10 </td>
+                </tr>
+                <tr class="evenrow">
+                    <td> Food </td>
+                    <td> 9 </td>
+                    <td> 9 </td>
+                    <td> 8.5 </td>
+                    <td> 5 </td>
+                    <td> 7 </td>
+                    <td> 8.5 </td>
+                    <td> 5 </td>
+                    <td>N/A</td>
+                    <td> 9.5 </td>
+                    <td> 9.5 </td>
+                </tr>
+            </table>
+        <form action="https://formspree.io/f/xpzvpnok" method="post">
+            <label for="favorite_country">Country: </label> <br>
+            <input type="text" id="favorite_country" name="favorite_country"> <br>
+            <label> Why is it your favorite? </label><br>
+            <textarea id="why_favorite" name="why_favorite" rows="3" cols="60"></textarea><br>
+            <p> What is the best part of the Country? </p>
+                <input type="radio" id="people" name="people_place_food" value="best people">
+                <label for="people"> People </label>
+                <input type="radio" id="place" name="people_place_food" value="best place">
+                <label for="place"> Place </label>
+                <input type="radio" id="food" name="people_place_food" value="best food">
+                <label for="food"> Food </label>
+                <p>
+                    <input type="submit" value="Send Form">
+                </p>
+            
+        </form>
+        
+    </body>
