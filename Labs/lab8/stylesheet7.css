@@ -1,0 +1,32 @@
+body {background-color: #d8f6ff; color: #000000}
+a {color: #74ccf4;}
+a:hover {color: #2389da;}
+h1,h2 {color: #0e4291;}
+nav {background-color: #0e4291;}
+.navlink {color: #ffffff;}
+nav a:hover {background-color: #2389da;}
+nav {padding: 10px; margin-bottom: 30px;}
+.evenrow {background-color: #f6fcff;}
+.quote1 {float: right;}
+.clear {clear: both;}
+
+.my_info {display: flex; 
+    background-color: #ffffff; 
+    border-radius: 1em;
+    padding: 10px; 
+    margin: 30px;}
+.address, .contact {padding: 20px;}
+.address {flex: 1;}
+.contact {flex: 1;}
+
+
+.your_info {display: flex; 
+    background-color: #ffffff; 
+    border-radius: 1em; 
+    padding: 40px;
+     margin: 30px;}
+.form, .map {padding: 20px;}
+.form {flex: 1;}
+.map {flex: 1;}
+
+
