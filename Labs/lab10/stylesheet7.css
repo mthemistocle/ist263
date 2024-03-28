@@ -1,0 +1,78 @@
+body {background-color: #ffffff; 
+    color: #000000;
+    font-family:'Courier New', Courier, monospace}
+a {color: #74ccf4;}
+a:hover {color: #2389da;}
+
+h1,h2 {color: #010165}
+.myskillshead {text-align: center;}
+
+nav {background-color: #e4f8fe; border: 1px solid #010165}
+.navlink {color: #000000;}
+nav a:hover {background-color: #010165; padding: 10px;}
+nav {padding: 10px; margin-bottom: 30px;}
+
+.evenrow {background-color: #f6fcff;}
+
+.quote1 {float: right;}
+.clear {clear: both;}
+
+.my_info {display: flex; 
+    background-color: #e4f8fe; 
+    border: 1px solid #010165;
+    border-radius: 1em;
+    padding: 10px; 
+    margin: 30px;}
+.address, .contact {padding: 20px;}
+.address {flex: 1;}
+.contact {flex: 1;}
+
+
+.your_info {display: flex; 
+    background-color: #e4f8fe; 
+    border: 1px solid #010165;
+    border-radius: 1em; 
+    padding: 40px;
+     margin: 30px;
+    flex-wrap: wrap;
+    }
+.form, .map {padding: 20px;}
+.form {flex: 1;}
+.map {flex: 1;}
+
+
+.coreskills {display: flex; 
+    margin: 75px 0px;
+    flex-wrap: wrap;
+}
+.core1 {flex: 1;}
+.core2 {flex: 1;}
+.core3 {flex: 1;}
+.core4 {flex: 1;}
+.core5 {flex: 1;}
+
+.skillimg {width: 65px;}
+figcaption {font-size: 1.25em; color: #010165;}
+
+.otherskills {background-color: #e4f8fe; 
+    padding: 25px;
+    border-radius: 1em; 
+    border: 1px solid #010165; margin: 25px 25px 0px;
+}
+
+.myskillsbox {display: flex; 
+    justify-content: space-around; 
+    margin: 50px;
+    flex-wrap: wrap;}
+
+.meghanbanner {max-width: 100%;}
+
+@media only screen and (max-width: 1024px) { 
+    nav a { max-width: 100%;
+        display: block; padding: 10px; } 
+    span {display: none;}    
+    
+}
+
+
+
