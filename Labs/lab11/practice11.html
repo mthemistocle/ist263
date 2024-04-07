@@ -8,15 +8,20 @@
     <title>Lab 12</title>
     <link rel="stylesheet" href="https://laferger.github.io/ist263/images/animate.css">
     <script>
-        alert('You won!');
+
+        function WinnerMessage () {
+            alert('You won!');}
+
+        function TryAgain () {
+            alert('Wrong Shell');}
 
 
     </script>
 </head>
 <body>
     <h1>Choose a Walnut</h1>
-    <img src="https://laferger.github.io/ist263/images/walnut.png" alt="first walnut" class="first">
-    <img src="https://laferger.github.io/ist263/images/walnut.png" alt="second walnut" class="second">
-    <img src="https://laferger.github.io/ist263/images/walnut.png" alt="third walnut" class="third">
+    <img src="https://laferger.github.io/ist263/images/walnut.png" alt="first walnut" class="first" onclick="WinnerMessage();">
+    <img src="https://laferger.github.io/ist263/images/walnut.png" alt="second walnut" class="second" onclick="TryAgain();">
+    <img src="https://laferger.github.io/ist263/images/walnut.png" alt="third walnut" class="third" onclick="TryAgain();">
 </body>
 </html>
