@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisrt JS Program</title>
+    <style>
+        h1 {cursor: pointer;}
+    </style>
+    <script>
+        function clicky () { 
+            alert("Hello World!");
+        }
+
+        function another () { 
+            alert("Second Message");
+        }
+
+        function loady () { 
+            alert("Page Load");
+        }
+
+    
+       
+    </script>
+</head>
+<body onload="loady();">
+    <h1 onclick="clicky()"> Welcome to JavaScript</h1>
+    <p onmouseover="another();"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo magnam labore fugit hic id, maiores magni, dignissimos veniam nulla minima alias, quaerat officiis eos? Magni tempore voluptate iusto eos similique!</p>
+    
+</body>
+</html>
