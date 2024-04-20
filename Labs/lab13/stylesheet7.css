@@ -9,7 +9,7 @@ h1,h2 {color: #010165}
 
 nav {background-color: #e4f8fe; border: 1px solid #010165}
 .navlink {color: #000000;}
-nav a:hover {background-color: #010165;}
+nav a:hover {background-color: #010165; padding: 10px;}
 nav {padding: 10px; margin-bottom: 30px;}
 
 .evenrow {background-color: #f6fcff;}
@@ -33,7 +33,9 @@ nav {padding: 10px; margin-bottom: 30px;}
     border: 1px solid #010165;
     border-radius: 1em; 
     padding: 40px;
-     margin: 30px;}
+     margin: 30px;
+    flex-wrap: wrap;
+    }
 .form, .map {padding: 20px;}
 .form {flex: 1;}
 .map {flex: 1;}
@@ -41,7 +43,14 @@ nav {padding: 10px; margin-bottom: 30px;}
 
 .coreskills {display: flex; 
     margin: 75px 0px;
+    flex-wrap: wrap;
 }
+.core1 {flex: 1;}
+.core2 {flex: 1;}
+.core3 {flex: 1;}
+.core4 {flex: 1;}
+.core5 {flex: 1;}
+
 .skillimg {width: 65px;}
 figcaption {font-size: 1.25em; color: #010165;}
 
@@ -54,7 +63,15 @@ figcaption {font-size: 1.25em; color: #010165;}
 .myskillsbox {display: flex; 
     justify-content: space-around; 
     margin: 50px;
+    flex-wrap: wrap;}
 
+.meghanbanner {max-width: 100%;}
+
+@media only screen and (max-width: 1024px) { 
+    nav a { max-width: 100%;
+        display: block; padding: 10px; } 
+    span {display: none;}    
+    
 }
 
 .skip {
@@ -69,7 +86,4 @@ figcaption {font-size: 1.25em; color: #010165;}
 .skip:focus {
     left: 10px;
 }
-
-
-
 
