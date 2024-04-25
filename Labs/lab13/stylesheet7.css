@@ -4,7 +4,14 @@ body {background-color: #ffffff;
 a {color: #010165;}
 a:hover {color: #2389da;}
 
-h1,h2 {color: #010165}
+h1,h2 {
+    color: #010165;
+    font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal; }
+
+
+  
 .myskillshead {text-align: center;}
 
 nav {background-color: #e4f8fe; border: 1px solid #010165}
@@ -86,4 +93,6 @@ figcaption {font-size: 1.25em; color: #010165;}
 .skip:focus {
     left: 10px;
 }
+
+
 
