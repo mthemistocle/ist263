@@ -4,78 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page </title>
-    <style>
-        img {max-width: 100%}
-    </style>
-</head>
-<body>
-    <nav> 
-        <a class="navlink" href="home.html"> Home</a> <span> &#124; </span> 
-        <a class="navlink" href="about.html"> About Me</a> <span> &#124; </span> 
-        <a class="navlink" href="passionweekly.html"> My Passion Project Weekly </a>
-    </nav>
+    <link rel="stylesheet" href="stylesheetfinal.css">
+    <script defer>
     
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    function typeWriter(text, i) {
+      const textElement = document.getElementById('typewriter-text');
+      if (i < text.length) {
+        textElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(function() {
+          typeWriter(text, i);
+        }, 50); 
+      }
+    }
+
+    
+    function clearText() {
+      const textElement = document.getElementById('typewriter-text');
+      textElement.innerHTML = '';
+    }
+
+    
+    function setTextAndStartTypewriter(newText) {
+      clearText(); 
+      typeWriter(newText, 0); 
+    }
+
+    
+    const initialText = "Hello, and Welcome.";
+    typeWriter(initialText, 0);
+
+    
+    setTimeout(function() {
+      const newText = "My name is Meghan.";
+      setTextAndStartTypewriter(newText);
+    }, 2000); 
+    
+    
+    setTimeout(function() {
+      clearText(); 
+      setTimeout(function() {
+        const anotherNewText = "Follow me on my journey of Self-Discovery.";
+        typeWriter(anotherNewText, 0);
+      }, 100); 
+    }, 4000); 
+  });
+
+    function hideSection () {
+            document.getElementById("whatspassion").style.display = 'none';
+            document.getElementById("whypassion").style.display = 'none';
+            document.getElementById("howpassion").style.display = 'none';
+        }
+    function revealWhatsPassion() {
+            document.getElementById("whatspassion").style.display = 'block';
+            document.getElementById("frontwhats").style.display = 'none';
+        }
+    function revealWhyPassion () {
+            document.getElementById("whypassion").style.display = 'block';
+            document.getElementById("frontwhy").style.display = 'none';
+        }
+    function revealHowPassion () {
+            document.getElementById("howpassion").style.display = 'block';
+            document.getElementById("fronthow").style.display = 'none';
+        }
+    
+    
+    
+
+    </script>
+</head>
+<body onload="hideSection();">
+    <nav class="mainnav"> 
+        <a href="#skip" class="skip" tabindex="1"> Skip to Content </a> <br>
+        <div> <a class="navlink" href="home.html" tabindex="2"> Home</a> </div>
+        <div> <a class="navlink" href="about.html" tabindex="3"> About Me</a> </div> 
+        <div> <a class="navlink" href="passionweekly.html" tabindex="4"> My Passion Project Weekly </a> </div>
+    </nav> 
+
     <header> 
-        <img class="meghanbanner" src="../project_images/passionwordcloud.jpg" alt="passion word clou"> 
+        <!-- <img src="../project_images/passionwordcloud.jpg" alt="passion word clou"> -->
+        <div class="typewriter"> 
+            <h1 id="typewriter-text"></h1>
+        </div>
+    
     </header>
 
-    <main>
-        <h3> WHATS PASSION PROJECT </h3>
-        <p> 
-            I found many ways to define a passion project, but this one aligns the most with how I view one, and what I mean when I talk about it.
-        </p>
-        <h1> passion project </h1>
-        <p> 
-            [ pash-uhn proj-ekt ]
-            noun <br>
-            1.	a personally fulfilling activity or undertaking pursued in one’s leisure time for pleasure, personal growth, emotional satisfaction, creative expression, etc.
-        </p>
-        <p> 
-            So, on this journey I , and hopefully you, will find something or things that do fulfill us, personally satisfies us emotionally, and helps us grow, while having a little fun. 
-        </p>
+    <main class="mainhomepage" id="skip">
+        <section class="whatspassion">
 
-        <h3> WHATS PASSION PROJECT </h3>
+            <h1 id="frontwhats" onclick="revealWhatsPassion();"> WHATS PASSION PROJECT </h1>
 
-        <p> 
-            Apparently, there are so many benefits to having a passion project. This article talks greatly about the benefits, but I will list and summarize a few of them. (Suggest you check out the article for yourselves)
-        </p>
+            <div id="whatspassion"><h1> WHATS PASSION PROJECT </h1>
+            <p> 
+                On this journey I will be venturing to find my passion project. I found many ways to define a passion project, but this one aligns the most with how I view one, and what I mean when I talk about it.
+            </p>
+            <h2> passion project </h2>
+            <p> 
+                [ pash-uhn proj-ekt ]
+                noun <br>
+                1.	a personally fulfilling activity or undertaking pursued in one’s leisure time for pleasure, personal growth, emotional satisfaction, creative expression, etc.
+            </p>
+            <p> 
+                So, on this journey I , and hopefully you, will find something or things that do fulfill us, personally satisfies us emotionally, and helps us grow, while having a little fun. 
+            </p></div>
 
-        <ul>
-            <li> <strong>Personal Growth – </strong>Step outside your comfort zone and  acquire new skills. This can boost self-esteem.  </li>
-            <li> <strong> Stress Reduction – </strong> Provides escape from the stresses and demands of everyday life, especially if it’s something that deeply satisfies you. </li>
-            <li> <strong> Mindfulness and Mental health – </strong> Allow you to put your full attention in to one thing, fostering mindfulness. This mindfulness can reduce anxiety and improve overall mental wellbeing. </li>
-            <li> <strong> Enhanced Creativity –  </strong> Your creativity ignited from your passion project can transfer into other parts of your life.</li>
-            <li> <strong> Self-fulfillment – </strong> Can make you feel accomplished and fulfilled, boosting your self-worth  and happiness (The ultimate goal of life)  </li>
-            <li> <strong> Building Relationships –</strong>  You can meet different and great people along the way. (and who knows… they could be at your wedding one day)</li>
-        </ul>
-        <p>
-            So, if you are trying to work on any of these things. Having a passion project can be just what you need, and you didn’t even know it. 
-        </p>
+        </section>
 
-        <h3> HOW PASSION PROJECT </h3>
-        <p>
-            To start a passion project, I found many iterations of steps, which I personally think all suck, but I am going to try to work with it. 
-        </p>
-        <ol>
-            <li> <strong> Identify a passion – </strong>  (LOL the hardest part) We’ll probably spend most of our time at this step but that’s okay.</li>
-            <li> <strong>Create a mission statement – </strong>  Less formally, decide what your end game is with this passion project.</li>
-            <li> <strong> Set goals- </strong>  Self-explanatory, set goals for how you want to actually accomplish this passion project. </li>
-            <li> <strong> Gather your resources – </strong>  What will you need to accomplish this passion project.</li>
-            <li> <strong> Get started!</strong></li>
-            <li> <strong> Document your journey.</strong> </li>
-        </ol>
-        <p>
-            Like I said, the hardest part, and the main objective of this blog, is to get over the hump of the first step, and hopefully the rest will fall into place. This is my first time doing this as well, so bear with me. 
-        </p>
+        <section class="whypassion"> 
+            <h1 id="frontwhy" onclick="revealWhyPassion();"> WHY PASSION PROJECT </h1>
 
+            <div id="whypassion" > <h1> WHY PASSION PROJECT </h1>
+
+            <p> 
+                Apparently, there are so many benefits to having a passion project. It can be just what you need and you didn’t even know it. 
+            </p>
+
+            <ul>
+                <li> <strong>Personal Growth – </strong>Step outside your comfort zone and  acquire new skills. This can boost self-esteem.  </li>
+                <li> <strong> Stress Reduction – </strong> Provides escape from the stresses and demands of everyday life, especially if it’s something that deeply satisfies you. </li>
+                <li> <strong> Mindfulness and Mental health – </strong> Allow you to put your full attention in to one thing, fostering mindfulness. This mindfulness can reduce anxiety and improve overall mental wellbeing. </li>
+                <li> <strong> Enhanced Creativity –  </strong> Your creativity ignited from your passion project can transfer into other parts of your life.</li>
+                <li> <strong> Self-fulfillment – </strong> Can make you feel accomplished and fulfilled, boosting your self-worth  and happiness (The ultimate goal of life)  </li>
+                <li> <strong> Building Relationships –</strong>  You can meet different and great people along the way. (and who knows… they could be at your wedding one day)</li>
+            </ul> </div>
+
+        </section>
+
+        <section class="howpassion"> 
+
+            <h1 id="fronthow" onclick="revealHowPassion();"> HOW PASSION PROJECT </h1>
+
+            <div id="howpassion"> <h1> HOW PASSION PROJECT </h1>
+            <p>
+                To start a passion project, I found many iterations of steps, which I personally think all suck, but I am going to try to work with it. 
+            </p>
+            <ol>
+                <li> <strong> Identify a passion – </strong>  (LOL the hardest part) We’ll probably spend most of our time at this step but that’s okay.</li>
+                <li> <strong>Create a mission statement – </strong>  Less formally, decide what your end game is with this passion project.</li>
+                <li> <strong> Set goals- </strong>  Self-explanatory, set goals for how you want to actually accomplish this passion project. </li>
+                <li> <strong> Gather your resources – </strong>  What will you need to accomplish this passion project.</li>
+                <li> <strong> Get started!</strong></li>
+                <li> <strong> Document your journey.</strong> </li>
+            </ol>
+            <p>
+                Like I said, the hardest part, and the main objective of this blog, is to get over the hump of the first step, and hopefully the rest will fall into place. This is my first time doing this as well, so bear with me. 
+            </p></div>
+
+        </section>
 
 
 
     </main>
     
 
-    <footer>
 
+    <footer>
+        <form action="https://formspree.io/f/xpzvpnok" method="post"> 
+            <h3> Join the passion project family! </h3>
+                <div class="Signup">
+                    <div class="name">
+                        <label for="name">Name</label>
+                        <br>
+                        <input type="text" id="name" name="name"> 
+                    </div>
+                    <div class="email">
+                        <label for="email"> Email</label> <br>
+                        <input type="text" id="email" name="email"> <br>
+                    </div>
+                </div>    
+
+                <input type="submit" class="submit" value="Sign Up"> <br>
+
+    
+        </form> 
     </footer>
+
 </body>
 </html>

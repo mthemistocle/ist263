@@ -4,76 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <style>
-        .AboutMe {display: flex;}
-        .aboutmeinfo {flex: 1;}
-        .aboutmepic {flex: 1}
-        .aboutthis {display: flex;}
-        .aboutthisinfo {
-            flex: 1;
-            order: 2;}
-        .aboutthispic {
-            flex: 1;
-            order: 1;}
-        .Signup {display: flex;}
-        .iglogo {width: 35px;}
-        .pinterestlogo {width: 35px;}
-        .linkedinlogo {width: 35px;}
+    <link rel="stylesheet" href="stylesheetfinal.css">
+    <script>
+          document.addEventListener("DOMContentLoaded", function() {
+    
+    function typeWriter(text, i) {
+      const textElement = document.getElementById('typewriter-text2');
+      if (i < text.length) {
+        textElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(function() {
+          typeWriter(text, i);
+        }, 50); 
+      }
+    }
 
-        img {max-width: 100%}
+    
+    function clearText() {
+      const textElement = document.getElementById('typewriter-text2');
+      textElement.innerHTML = '';
+    }
 
+    
+    function setTextAndStartTypewriter(newText) {
+      clearText(); 
+      typeWriter(newText, 0); 
+    }
 
-    </style>
+    
+    const initialText = "Who am i?";
+    typeWriter(initialText, 0);
+  });
+
+    </script>
 </head>
 <body>
-    <nav> 
-        <a class="navlink" href="home.html"> Home</a> <span> &#124; </span> 
-        <a class="navlink" href="about.html"> About Me</a> <span> &#124; </span> 
-        <a class="navlink" href="passionweekly.html"> My Passion Project Weekly </a>
-    </nav> 
+    <nav class="mainnav"> 
+        <a href="#skip" class="skip" tabindex="1"> Skip to Content </a> <br>
+        <div> <a class="navlink" href="home.html" tabindex="2"> Home</a> </div>
+        <div> <a class="navlink" href="about.html" tabindex="3"> About Me</a> </div> 
+        <div> <a class="navlink" href="passionweekly.html" tabindex="4"> My Passion Project Weekly </a> </div>
+    </nav>  
 
-    <header> 
-        <img class="meghanbanner" src="../Images/meghan_banner.jpeg" alt="meghan's banner"> 
+    <header class="aboutheader"> 
+        <div class="typewriter2"> 
+            <!-- <img src="../project_images/meghanbannerlarge.png" alt="meghan's banner"> -->
+            <h1 id="typewriter-text2"></h1>
+        </div>
+        
     </header>
 
-    <main>
-        <div class="AboutMe">
+    <main class="aboutpage" id="skip">
+        <section class="AboutMe">
             <div class="aboutmeinfo">
-                 <h2> About Me </h2>
-                <p> My name is Meghan Themistocle, I am a 22-year-old, soon to be, graduate, with no real passion for something. I will be officially adulting in the next few months, and with all the stress, excitement, and overwhelming change that is about to come, I feel that I will need that one or few things to reminded me of myself and to help me stay grounded when the chaos ensues.  </p>
-        
-                <p> For starters, I do not have commitment issues, and I am not a quitter (that’s okay if you are, I am here to help with that). My first passion in life (or at least what I thought it was) was sports. I played soccer and basketball from 4 to 18 years old. I played on several different teams at a high level for many (many) years. I was good at it, and it really took a lot of time and effort out of me. Practices every day of the week, practices after practices, tournaments, and games every weekend on and on and on. The goal was to play in college, but when it got to that time, I realized that isn’t the lifestyle that wanted to live anymore, nor was that passion that I once felt there. When I got to college, it was completely different, I had nothing to do, which I enjoyed for some time, but now that’s not really working for me anymore. I want to feel what I once felt, a purpose outside school or work. That is why I’ve decided to do this.   </p>
+                 <h1> About Me </h1>
+                <p> My name is Meghan Themistocle, I am a 22-year-old, soon to be, graduate, with no real passion for something. I will be officially adulting in the next few months, and with all the stress, excitement, and overwhelming change that is about to come, I feel that I will need that one or few things to reminded me of myself and to help me stay grounded when the chaos ensues. </p>
+
+                <p>I call myself a "jack of trades but master of none" because I do enjoy doing a lot of things, like drawing, ceramics, playing soccer, basketball, cooking, and so much more. The problem is that I've never really taken the time to explore those things and establish what I'm really passionate about.  </p>
             </div>
             <div class="aboutmepic"> 
-                <img class="Picture1" src="../Images/Picture1.jpg" alt="meghan's picture">
+                <img class="Picture1" src="../project_images/Meghanheadshot.jpg" alt="meghan's headshot">
             </div>
-        </div>
+        </section>
     
-        <div class="aboutthis">
+        <section class="aboutthis">
             <div class="aboutthisinfo">
-                <h2> What to Expect </h2>
+                <h1> What to Expect </h1>
             <p> With this blog I hope to try new activities and experiences to find my passion and start my passion project. Throughout my journey there will be a lot of successes and A LOT of failures, but  I hope to document and share my stories with you, and maybe help you find your own passion project. </p>
             </div>
             <div class="aboutthispic">
-                <img class="Picture3" src="../Images/Picture3.jpg" alt="passion picture">
+                <img class="Picture3" src="../project_images/passion2.jpg" alt="the word passion">
             </div>
-        </div>
-      
-
+        </section>
 
     </main>
-    <hr>
+   
+  
 
     <footer>
-        <form> 
-            <h6> Join the passion project family! </h6>
+        <form action="https://formspree.io/f/xpzvpnok" method="post"> 
+            <h3> Join the passion project family! </h3>
                 <div class="Signup">
-                    <div>
+                    <div class="name">
                         <label for="name">Name</label>
                         <br>
                         <input type="text" id="name" name="name"> 
                     </div>
-                    <div>
+                    <div class="email">
                         <label for="email"> Email</label> <br>
                         <input type="text" id="email" name="email"> <br>
                     </div>
@@ -81,11 +98,7 @@
 
                 <input type="submit" class="submit" value="Sign Up"> <br>
 
-                <img class="iglogo" src="../Images/instagramlogo.png" alt="instagram logo">
-
-                <img class="pinterestlogo" src="../Images/pinterestlogo.png" alt="pinterest logo">
-
-                <img class="linkedinlogo" src="../Images/linkedinlogo.png" alt="linkedin logo">
+    
         </form> 
     </footer>
 
